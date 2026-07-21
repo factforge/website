@@ -1,0 +1,365 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #1A1A1A;
+  --paper: #FFFFFF;
+  --iron: #52525B;
+  --ember: #C2410C;
+  --char: #3F3F46;
+  --soot: #E4E4E7;
+  --surface: #F8F8F8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #F0F0F0;
+    --paper: #0C0C0C;
+    --iron: #A1A1AA;
+    --ember: #F97316;
+    --char: #D4D4D8;
+    --soot: #27272A;
+    --surface: #161616;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ink: #F0F0F0;
+  --paper: #0C0C0C;
+  --iron: #A1A1AA;
+  --ember: #F97316;
+  --char: #D4D4D8;
+  --soot: #27272A;
+  --surface: #161616;
+}
+
+:root[data-theme="light"] {
+  --ink: #1A1A1A;
+  --paper: #FFFFFF;
+  --iron: #52525B;
+  --ember: #C2410C;
+  --char: #3F3F46;
+  --soot: #E4E4E7;
+  --surface: #F8F8F8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  color: var(--iron);
+  background: var(--paper);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--char);
+  text-decoration-color: var(--soot);
+  text-underline-offset: 0.2em;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--iron);
+}
+
+/* — Nav — */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 100;
+}
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 1.0625rem;
+  color: var(--iron);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+/* — Hero — */
+.hero {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8rem 2.5rem 6rem;
+}
+
+.hero-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.hero-descriptor {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--iron);
+}
+
+/* — Sections — */
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  border-top: 1px solid var(--soot);
+}
+
+.section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--char);
+  margin-bottom: 1.5rem;
+}
+
+.section p {
+  max-width: 720px;
+  font-size: 1.25rem;
+}
+
+.section p + p {
+  margin-top: 1rem;
+}
+
+/* — Status badge — */
+.status {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+/* — Subpages — */
+.page-section {
+  border-top: none;
+  padding-top: 6rem;
+}
+
+.page-section .back-link {
+  margin-bottom: 1.75rem;
+}
+
+.page-section .back-link a {
+  font-size: 1.0625rem;
+  color: var(--iron);
+  text-decoration: none;
+}
+
+.page-section .back-link a:hover {
+  color: var(--ink);
+}
+
+.page-title {
+  font-size: 2.25rem !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  color: var(--ink) !important;
+}
+
+.page-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 2.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.page-section h3:first-of-type {
+  margin-top: 2rem;
+}
+
+.page-section ul {
+  padding-left: 1.5rem;
+  margin-top: 0.625rem;
+  max-width: 720px;
+  font-size: 1.25rem;
+  color: var(--iron);
+}
+
+.page-section li {
+  margin-bottom: 0.5rem;
+}
+
+.page-section a {
+  color: var(--char);
+}
+
+.page-section a:hover {
+  color: var(--ink);
+}
+
+/* — FAQ — */
+.faq details {
+  border-bottom: 1px solid var(--soot);
+}
+
+.faq details:first-of-type {
+  border-top: 1px solid var(--soot);
+}
+
+.faq details summary {
+  padding: 1.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq details summary::after {
+  content: "+";
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--iron);
+  flex-shrink: 0;
+  margin-left: 1.25rem;
+}
+
+.faq details[open] summary::after {
+  content: "\2212";
+}
+
+.faq details p {
+  padding: 0 0 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--iron);
+  max-width: 720px;
+}
+
+.faq details a {
+  color: var(--char);
+}
+
+.faq details a:hover {
+  color: var(--ink);
+}
+
+/* — Contact — */
+.contact a {
+  color: var(--char);
+}
+
+.contact a:hover {
+  color: var(--ink);
+}
+
+/* — Footer — */
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 3.5rem;
+  border-top: 1px solid var(--soot);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  font-size: 1.0625rem;
+  color: var(--iron);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--ink);
+}
+
+.copyright {
+  font-size: 1rem;
+  color: var(--iron);
+}
+
+/* — Responsive — */
+@media (max-width: 600px) {
+  body { font-size: 1.125rem; }
+  nav { padding: 1.25rem 1.5rem; }
+
+  .hero {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .hero-name {
+    font-size: 3.25rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  footer {
+    padding: 2rem 1.5rem 2.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links { gap: 1.5rem; }
+
+  .page-section { padding-top: 4rem; }
+}
