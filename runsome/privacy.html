@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RunSome Privacy Policy — Fact Forge</title>
+  <meta name="description" content="Privacy policy for RunSome, an app by Fact Forge.">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* The shared nav doesn't wrap, so on a phone it runs off the screen; wrap it on this page. */
+    @media (max-width: 600px) {
+      nav { flex-wrap: wrap; row-gap: 0.75rem; }
+      .nav-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
+    }
+    .page-section li strong { color: var(--ink); }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔨</text></svg>">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../" class="wordmark">Fact Forge</a>
+      <div class="nav-links">
+        <a href="../#about">About</a>
+        <a href="../#apps">Apps</a>
+        <a href="../#faq">FAQ</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../support.html">Support</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-section">
+      <p class="back-link"><a href="../privacy.html">&larr; All privacy policies</a></p>
+      <h2 class="page-title">RunSome Privacy Policy</h2>
+      <p><em style="font-size: 0.8125rem;">Last updated November 3, 2026</em></p>
+
+      <h3>Who we are</h3>
+      <p>
+        RunSome is made by Fact Forge LLC ("Fact Forge," "we," "our" or "us").
+        RunSome is a running game. It records your runs with GPS, turns the
+        ground you cover into territory on a shared map, and holds events with
+        prizes. This policy explains what RunSome collects, how we use it, who
+        we share it with and how long we keep it.
+      </p>
+
+      <h3>What we collect</h3>
+      <ul>
+        <li><strong>Account.</strong> You sign in with your Google account.
+          Firebase Authentication stores your basic Google profile: your name,
+          email address and a link to your profile photo. Our server stores your
+          name and email address with the account ID that Firebase
+          assigns.</li>
+        <li><strong>Location and runs.</strong> While you record a run, the app
+          reads your precise location, in the background too, to draw your
+          route. When you finish, it uploads the run to our server: the route
+          (each point's position, height and time) and the run's name, notes and
+          type. Starting with the next version, a run that can't upload yet
+          waits on your phone until it can.</li>
+        <li><strong>Territory.</strong> Our server turns your routes into
+          territory and ranks you in events.</li>
+        <li><strong>Strava.</strong> If you connect Strava, our server stores
+          your Strava athlete ID and the access keys Strava issues, and the app
+          keeps those keys on your phone.</li>
+        <li><strong>Apple Health.</strong> The next version can import your past
+          runs. If you choose to, it reads your workouts and their routes from
+          Apple Health and uploads them as runs. RunSome never writes to Health.
+          The current test version doesn't use Health.</li>
+        <li><strong>Crash reports and usage data.</strong> Firebase Crashlytics
+          sends us crash reports and error details, such as device model, iOS
+          version, app version and where in the app the problem happened.
+          Firebase Analytics records how the app is used: app launches, which
+          tab you open, which event you open (by the event's name), sign-ins and
+          sign-outs, account deletion, sharing the app, and GPS problems such as
+          low accuracy. These events come with Firebase's app-instance ID and
+          basic device information, and Google works out your general location,
+          such as your city or country, from your IP address. They never include
+          your routes or your name, and they are not linked to your
+          account.</li>
+        <li><strong>On your phone only.</strong> During a run, your time and
+          distance show on your Lock Screen. This happens on your phone.</li>
+      </ul>
+
+      <h3>How we use it</h3>
+      <ul>
+        <li>To record your runs, build territory, run events and leaderboards,
+          and keep you signed in.</li>
+        <li>To post your runs to Strava, if you connect it.</li>
+        <li>To find and fix problems, through crash reports, and to see how the
+          app is used, through analytics.</li>
+        <li>We do not sell or rent your personal data. RunSome shows no ads, has
+          no advertising or ad-tracking code, and doesn't ask to track you.</li>
+      </ul>
+
+      <h3>Who we share it with</h3>
+      <ul>
+        <li><strong>Other players.</strong> Other players see your territory on
+          the map and your rank on event leaderboards, with your name. Because
+          territory follows your routes, other players can see the areas where
+          you run.</li>
+        <li><strong>Strava</strong> receives each run, if you connect it.
+          <a href="https://www.strava.com/legal/privacy">Strava's privacy policy</a></li>
+        <li><strong>Google Firebase</strong> provides sign-in (Firebase
+          Authentication), crash reporting (Crashlytics) and analytics (Firebase
+          Analytics). Firebase encrypts data in transit with HTTPS. Firebase
+          Authentication runs only in US data centers. Google may store and
+          process other data wherever it has facilities.
+          <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a></li>
+        <li><strong>Google</strong> provides Google sign-in.
+          <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><strong>Amazon Web Services</strong> hosts our server.
+          <a href="https://aws.amazon.com/privacy/">AWS privacy notice</a></li>
+        <li><strong>OpenFreeMap</strong> and <strong>CARTO</strong> provide the
+          map images. Like any website, they receive your IP address and see
+          which part of the map you're viewing.
+          <a href="https://openfreemap.org/privacy/">OpenFreeMap privacy</a>,
+          <a href="https://carto.com/privacy">CARTO privacy</a></li>
+        <li><strong>Apple</strong> distributes the app.
+          <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a></li>
+      </ul>
+
+      <h3>How long we keep it and how to delete it</h3>
+      <ul>
+        <li>We keep your account, runs and territory until your account is
+          deleted.</li>
+        <li>In the current test version (0.1.0, build 18), Delete account removes
+          your sign-in account but not your runs on our server. Email
+          <a href="mailto:factforge@atomicmail.io">factforge@atomicmail.io</a>
+          and we will delete them.</li>
+        <li>In the next version, Delete account also deletes your account from
+          our server and disconnects RunSome from Strava. Your runs and
+          territory stay in the game, moved to one shared anonymous account, and
+          are no longer linked to you.</li>
+        <li>Disconnecting Strava in the app stops the posts to Strava.</li>
+        <li>Firebase Crashlytics keeps crash reports for 90 days. Firebase
+          Authentication keeps the IP addresses it logs for a few weeks.</li>
+      </ul>
+
+      <h3>Children</h3>
+      <p>
+        RunSome is not made for children under 13, and we do not knowingly
+        collect personal information from children under 13. If you believe a
+        child under 13 has given us personal information, contact us and we
+        will delete it.
+      </p>
+
+      <h3>Changes</h3>
+      <p>
+        We may update this policy from time to time. Changes will be posted on
+        this page with an updated date.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        Questions about this policy:
+        <a href="mailto:factforge@atomicmail.io">factforge@atomicmail.io</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../support.html">Support</a>
+    </div>
+    <span class="copyright">&copy; 2026 Fact Forge LLC</span>
+  </footer>
+</body>
+</html>
